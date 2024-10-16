@@ -1,0 +1,11 @@
+---
+# tasks file for roles
+- name: Installing apache2 server
+  action: apt name=apache2 state=present
+
+- name: copy file
+  action: copy src=files/index.html dest=/var/www/html/index.html owner=root group=root mode='0664'
+
+- name: copy file
+  action: copy src=files/test.html dest=/home/ubuntu/ owner=root group=root mode='0664'
+
